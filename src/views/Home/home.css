@@ -17,14 +17,12 @@
 
 .light1 {
   background: #a855f7; /* light-purple */
-  animation: moveLight 8s infinite alternate ease-in-out;
   left: 0;
   top: 0;
 }
 
 .light2 {
   background: #f472b6; /* light-pinkish-reddish */
-  animation: moveLight2 10s infinite alternate ease-in-out;
   right: 0;
   bottom: 0;
 }
