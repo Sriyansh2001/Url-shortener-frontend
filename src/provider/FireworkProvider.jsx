@@ -10,8 +10,8 @@ export const FireworksProvider = ({ children }) => {
   const startFireworks = () => {
     const newFireworks = Array.from({ length: 30 }).map(() => ({
       id: Math.random(),
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
+      x: Math.random() * (window.innerWidth - 60),
+      y: Math.random() * (window.innerHeight - 60),
     }));
     setFireworks(newFireworks);
     setTimeout(() => setFireworks([]), 1000); // Stop after 1 second

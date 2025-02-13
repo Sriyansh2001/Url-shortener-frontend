@@ -10,7 +10,7 @@ export default function useHome() {
     onSuccess: () => startFireworks(),
   });
   const [inputUrl, setInputUrl] = useState("");
-  const [createdUrl, setCreatedUrl] = useState("ww.googl.com");
+  const [createdUrl, setCreatedUrl] = useState("");
   const { startFireworks } = useFireworks();
 
   useEffect(() => {

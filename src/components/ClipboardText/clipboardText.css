@@ -7,4 +7,5 @@
 
 .copy-icon {
   cursor: pointer;
+  z-index: 10;
 }
