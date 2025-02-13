@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { axiosPublicInstance } from "../service/axiosPublicInstance";
 
-export default function useApi({ url, method = "GET" }) {
+export default function useApi({
+  url,
+  method = "GET",
+  onSuccess = () => {},
+  onError = () => {},
+}) {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -20,8 +25,10 @@ export default function useApi({ url, method = "GET" }) {
         headers,
       });
       setData(response.data);
+      onSuccess(response.data);
     } catch (error) {
       setError(error);
+      onError(error);
     } finally {
       setLoading(false);
     }
